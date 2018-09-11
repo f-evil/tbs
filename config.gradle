@@ -1,0 +1,213 @@
+ext {
+
+    //编译API,版本号,版本名称
+    android = [
+            APPLICATIONID    : "com.easy.tbs",
+            COMPILESDKVERSION: 25,
+            BUILDTOOLSVERSION: "25.0.3",
+            MINSDKVERSION    : 19,
+            TARGETSDKVERSION : 23,
+            VERSIONCODE      : 3,
+            VERSIONNAME      : "1.0.2"]
+
+    releasekey = [
+            APP_SERVICE_DEBUG: "false",
+            APP_NAME         : "TBS"
+    ]
+
+    debugkey = [
+            APP_SERVICE_DEBUG: "true",
+            APP_NAME         : "TBS-测试"
+    ]
+
+    bugly = [
+            APPID : "",
+            APPKEY: ""]
+
+    //V8包
+    dependencies = [
+            //V8
+            RENDERSCRIPTTARGETAPI         : 15,
+            RENDERSCRIPTSUPPORTMODEENABLED: true,
+
+            //httpclient
+            HTTPCLIENT                    : "org.apache.http.legacy",
+
+            //V4等
+            SUPPORTLIB                    : "25.3.1",
+
+            //V7,Design包等
+            SUPPORTLIB_D                  : "25.3.1",
+
+            //butterknife
+            BUTTERKNIFE                   : "8.7.0",
+
+            //nineoldandroids
+            NINEOLDANDROIDS               : "2.4.0",
+
+            //FlycoTabLayout_Lib
+            FLYCOTABLAYOUT_LIB            : "2.0.0@aar",
+            FLYCOSYSTEMBAR_LIB            : "1.0.0@aar",
+
+            //gson
+            GSON                          : "gson:2.8.2",
+
+            //fastjson
+            FASTJSON                      : "1.1.59.android",
+
+            //sqlcipher
+            SQLCIPHER                     : "3.4.0",
+
+            //AndPermission
+            PERMISSION                    : "2.0.0-rc3",
+
+            //rxandroid
+            RXANDROID                     : "1.2.1",
+            RXJAVA                        : "1.1.6",
+            RXLIFECYCLE                   : "0.7.0",
+            RXBUS                         : "1.0.5",
+            CONVERTERGSON                 : "2.0.2",
+            ADAPTERRXJAVA                 : "2.0.2",
+            LOGGINGINTERCEPTOR            : "3.0.1",
+
+            //leakcanary
+            LEAKCANARY                    : "1.4-beta2",
+
+            //blockcanary
+            BLOCKCANARY                   : "1.2.1",
+
+            //GLIDE
+            GLIDE                         : "4.0.0",
+
+            //crash
+            CRASHREPORT                   : "1.2.9",
+
+            //umeng
+            ANALYTICS                     : "5.6.1",
+
+            //rxbinding
+            RXBINDING                     : "0.4.0",
+
+            //ultra-ptr
+            ULTRAPTR                      : "1.0.11",
+
+            //material-dialogs
+            MATERIALDIALOGS               : "0.9.0.2",
+
+            //multidex
+            MULTIDEX                      : "1.0.1",
+
+            //okhttp
+            OKHTTP                        : "3.3.1",
+            OKIO                          : "1.6.0",
+
+            //BaseRecyclerViewAdapterHelper
+            BASERECYCLERVIEWADAPTERHELPER : "2.9.34",
+
+            //constraint-layout
+            CONSTRAINTLAYOUT              : "1.0.2",
+
+            //crossfadedrawerlayout-layout
+            CROSSFADEDRAWERLAYOUT         : "1.0.0@aar",
+
+            //wcdb
+            WCDB                          : "wcdb-android:1.0.2",
+
+            //richtext
+            RICHTEXT                      : "richtext:2.5.1",
+
+            //UTILS
+            UTILS                         : "1.0.1",
+            //keyboard
+            KEYBOARD                      : "1.0.0",
+            //appupgrade
+            APPUPGRADE                    : "1.0.1",
+            //imagecompress
+            IMAGECOMPRESS                 : "1.0.0",
+            //flowtag
+            FLOWTAG                       : "1.0.0",
+            //madapter
+            MADAPTER                      : "1.0.0",
+            //rollerview
+            ROLLERVIEW                    : "1.0.0",
+            //expressionselector
+            EXPRESSIONSELECTOR            : "1.0.0",
+            //systembar
+            SYSTEMBAR                     : "1.0.0",
+            //bdlocation
+            BDLOCATION                    : "1.0.1",
+
+            //greendao
+            GREENDAO                      : "3.2.2",
+
+            //switch-button
+            SWITCHBUTTON                  : "0.0.3@aar",
+
+            //calendarview
+            CALENDARVIEW                  : "3.3.0",
+
+            //swipe-recyclerview
+            SWIPERECYCLERVIEW             : "1.1.4",
+
+            //filepicker
+            FILEPICKER                    : "1.1.1",
+
+            //pickview
+            PICKERVIEW                    : "3.2.7",
+
+            //okgo
+            OKGO                          : "3.0.4",
+
+            //com.fyj.easylinking:appupgrade
+            APPUPGRADE                    : "1.0.4",
+
+            //com.fyj.easylinking
+            MVP                           : "1.0.3",
+
+            //com.fyj.easylinking
+            EASYVIEW                      : "1.0.7",
+
+            //com.fyj.floatActionMenu
+            FLOATACTIONMENU               : "1.0.6",
+
+            //com.github.PhilJay
+            MPANDROIDCHART                : "v3.0.3",
+
+            //com.android.support.constraint
+            CONSTRAINT_LAYOUT             : "1.0.2",
+
+            //io.supercharge
+            SHIMMERLAYOUT                 : "2.1.0",
+
+            //com.lzy.net
+            OKSERVER                      : "2.0.5",
+
+            //com.tencent.xinge
+            XINGE                         : "3.2.3-release",
+
+            //com.tencent.mm.opensdk
+            WECHAT_SDK_ANDROID_WITH_MTA   : "1.4.0",
+
+            //com.tencent.mid
+            MID                           : "4.0.6-release",
+
+            //com.tencent.wup
+            WUP                           : "1.0.0.E-release",
+
+            //com.github.LuckSiege.PictureSelector
+            PICTURE_LIBRARY               : "v2.1.7",
+
+            //com.github.siyamed
+            ANDROID_SHAPE_IMAGEVIEW       : "0.9.+@aar",
+
+            //me.leolin
+            SHORTCUT_BADGER               : "1.1.21@aar",
+
+            //me.relex
+            CIRCLEINDICATOR               : "1.2.2@aar",
+
+            //wx
+            WX                            : "1.4.0"
+
+    ]
+}

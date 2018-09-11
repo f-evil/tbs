@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.COMPILESDKVERSION
+    buildToolsVersion rootProject.ext.android.BUILDTOOLSVERSION
+
+    defaultConfig {
+        applicationId rootProject.ext.android.APPLICATIONID
+        minSdkVersion rootProject.ext.android.MINSDKVERSION
+        targetSdkVersion rootProject.ext.android.TARGETSDKVERSION
+        versionCode rootProject.ext.android.VERSIONCODE
+        versionName rootProject.ext.android.VERSIONNAME
+
+        ndk {
+            abiFilters 'armeabi'
+        }
+
+        resConfigs "zh", "en"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        buildTypes {
+            release {
+                minifyEnabled true
+                shrinkResources true
+                zipAlignEnabled true
+                proguardFile('proguard-rules.pro')
+            }
+            debug {
+                minifyEnabled false
+                shrinkResources false
+                zipAlignEnabled false
+                proguardFile('proguard-rules.pro')
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+
+        dexOptions {
+            javaMaxHeapSize "4g"
+            jumboMode true
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //V4
+    compile 'com.android.support:support-v4:' + rootProject.ext.dependencies.SUPPORTLIB
+    //V7
+    compile 'com.android.support:appcompat-v7:' + rootProject.ext.dependencies.SUPPORTLIB_D
+    //dex-multidex
+    compile 'com.android.support:multidex:' + rootProject.ext.dependencies.MULTIDEX
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
